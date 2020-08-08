@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}メッセージページ{% endblock %}
+{% block css %}
+span.answer{background-color : black;
+color : black;
+padding-left:50px;
+padding-right:50px;}
+span.answer:hover{background-color : white;}
+p.question { margin-top : 30px; }
+h2 {font-size : 15pt;}
+h3 {font-size :12pt;}
+{% endblock %}
+{% load static %}
+{% block main %}
+
+{% csrf_token %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'nissyou/js/question2.js' %}" charset="utf-8"></script>
+{% endblock %}

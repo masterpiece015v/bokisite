@@ -5,5 +5,5 @@ from . import views
 app_name = "nissyou"
 
 urlpatterns = [
-    url(r'^$',views.Index.index , name="index"),
+    url(r'^$',views.Question2.question2 , name="question2"),
 ]

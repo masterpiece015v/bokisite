@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}メッセージページ{% endblock %}
+{% block css %}
+span.answer{background-color : black;
+color : black;
+padding-left:50px;
+padding-right:50px;}
+span.answer:hover{background-color : white;}
+p.question { margin-top : 30px; }
+h2 {font-size : 15pt;}
+h3 {font-size :12pt;}
+{% endblock %}
+{% load static %}
+{% block main %}
+
+<h2>過去問サイト</h2>
+<ul class="list-group">
+    <il class="list-group-item" style="background-color:#cccccc">日商簿記</il>
+    <ul class="list-group">
+        <a class="list-group-item" href="">３級</a>
+        <a class="list-group-item" href="{% url 'nissyou:question2' %}">２級</a>
+        <a class="list-group-item" href="">１級</a>
+    </ul>
+</ul>
+<ul class="list-group">
+    <il class="list-group-item" style="background-color:#cccccc">全経簿記</il>
+    <ul class="list-group">
+        <a class="list-group-item" href="">３級</a>
+        <a class="list-group-item" href="">２級会計</a>
+        <a class="list-group-item" href="">２級工簿</a>
+        <a class="list-group-item" href="">１級会計</a>
+        <a class="list-group-item" href="">１級工簿</a>
+    </ul>
+</ul>
+{% csrf_token %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'topsite/js/mainpage.js' %}" charset="utf-8"></script>
+{% endblock %}
